@@ -1,5 +1,9 @@
-from pastebinpy import __version__
+import os
+#####################
+import pastebinpy # import required module
 
+# define our variable for our paste
+paste = pastebinpy.paste(os.environ['api_key'], "title", "content", "2")
 
-def test_version():
-    assert __version__ == '0.1.0'
+# returns the pastebin url
+print(paste)
